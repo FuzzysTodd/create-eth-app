@@ -11,19 +11,19 @@
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "_owner",
+						"name": "owner",
 						"type": "address"
 					},
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "_spender",
+						"name": "spender",
 						"type": "address"
 					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "_value",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -36,38 +36,19 @@
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "_owner",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "_value",
-						"type": "uint256"
-					}
-				],
-				"name": "Deposit",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "_from",
+						"name": "from",
 						"type": "address"
 					},
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "_to",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "_value",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -75,34 +56,15 @@
 				"type": "event"
 			},
 			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "_owner",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "_value",
-						"type": "uint256"
-					}
-				],
-				"name": "Withdrawal",
-				"type": "event"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "owner",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "spender",
 						"type": "address"
 					}
 				],
@@ -121,12 +83,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "guy",
+						"name": "spender",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "wad",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -145,7 +107,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "owner",
 						"type": "address"
 					}
 				],
@@ -175,39 +137,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "deposit",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "name",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "symbol",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "totalSupply",
 				"outputs": [
 					{
@@ -223,12 +152,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "dst",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "wad",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -247,17 +176,17 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "src",
+						"name": "from",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "dst",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "wad",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
@@ -271,28 +200,71 @@
 				],
 				"stateMutability": "nonpayable",
 				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "wad",
-						"type": "uint256"
-					}
-				],
-				"name": "withdraw",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "receive"
 			}
 		],
 		"devdoc": {
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"allowance(address,address)": {
+					"details": "Get the allowance for `spender` to spend from `owner`.",
+					"params": {
+						"owner": "The address of the account owning tokens",
+						"spender": "The address of the account able to transfer the tokens"
+					},
+					"returns": {
+						"_0": "Amount of remaining tokens allowed to spent"
+					}
+				},
+				"approve(address,uint256)": {
+					"details": "`msg.sender` approves `spender` to spend `value` tokens",
+					"params": {
+						"spender": "The address of the account able to transfer the tokens",
+						"value": "The amount of wei to be approved for transfer"
+					},
+					"returns": {
+						"_0": "Always true if the call has enough gas to complete execution"
+					}
+				},
+				"balanceOf(address)": {
+					"details": "Get the balance of `owner`.",
+					"params": {
+						"owner": "The address from which the balance will be retrieved"
+					},
+					"returns": {
+						"_0": "Balance of owner"
+					}
+				},
+				"decimals()": {
+					"details": "Get the number of decimals this token has."
+				},
+				"totalSupply()": {
+					"details": "Query total supply of token",
+					"returns": {
+						"_0": "Total supply of token"
+					}
+				},
+				"transfer(address,uint256)": {
+					"details": "send `value` token to `to` from `msg.sender`",
+					"params": {
+						"to": "The address of the recipient",
+						"value": "The amount of token to be transferred"
+					},
+					"returns": {
+						"_0": "True if transfer was successful"
+					}
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "send `value` token to `to` from `from` on the condition it is approved by `from`",
+					"params": {
+						"from": "The address of the sender",
+						"to": "The address of the recipient",
+						"value": "The amount of token to be transferred"
+					},
+					"returns": {
+						"_0": "True if transfer was successful"
+					}
+				}
+			},
 			"version": 1
 		},
 		"userdoc": {
@@ -303,7 +275,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"0x(copy)/contracts/erc20/src/v06/WETH9V06.sol": "WETH9V06"
+			"0x(copy)/contracts/erc20/src/v06/LibERC20TokenV06_flattened.sol": "IERC20Token"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -317,14 +289,13 @@
 		"remappings": []
 	},
 	"sources": {
-		"0x(copy)/contracts/erc20/src/v06/WETH9V06.sol": {
-			"keccak256": "0xf0e7a8dafdb2a19c92ff6d00e9de0311ea4390880b3fc3d54ab56b139d2264f9",
+		"0x(copy)/contracts/erc20/src/v06/LibERC20TokenV06_flattened.sol": {
+			"keccak256": "0x52a881671fd021dd8a182efa9b2c7368d7a60b558b80ccb14766ab56674b5616",
 			"urls": [
-				"bzz-raw://7fe3a6774751753169dcc5e4111bb782c111817db9a7d40bf0434cc3a671c927",
-				"dweb:/ipfs/Qmao88C4PdB4fZbA7H1Nwuj29QTAKKSwhq8ordUS1PKnp4"
+				"bzz-raw://f8f49abf07c2c3359ec3c2baeb730c6d87d89b8f1a5873a2389ada0d3e80d47b",
+				"dweb:/ipfs/QmaDuRWSLRVFfGawAxZHLmy1L2tvEQyiH31MwRQmd8bgXT"
 			]
 		}
 	},
 	"version": 1
 }
-

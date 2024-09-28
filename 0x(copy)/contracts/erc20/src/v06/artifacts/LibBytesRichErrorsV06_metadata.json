@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"0x(copy)/contracts/erc20/src/v06/LibERC20TokenV06_flattened.sol": "LibERC20TokenV06"
+			"0x(copy)/contracts/erc20/src/v06/LibERC20TokenV06_flattened.sol": "LibBytesRichErrorsV06"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},

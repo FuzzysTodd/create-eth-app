@@ -1,0 +1,207 @@
+
+json
+{
+  "compiler": {
+    "version": "0.8.4",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      }
+    }
+  },
+  "sources": {
+    "YourContractName.sol": {
+      "content": "/*\n * Submitted for verification at BscScan.com on 2021-09-16\n */\npragma solidity ^0.8.4;\n\n// SPDX-License-Identifier: MIT\n\n/*\n * @dev Interface of the ERC20 standard as defined in the EIP.\n */\ninterface IERC20 {\n    function totalSupply() external view returns (uint256);\n    function balanceOf(address account) external view returns (uint256);\n    function transfer(address recipient, uint256 amount) external returns (bool);\n    function allowance(address owner, address spender) external view returns (uint256);\n    function approve(address spender, uint256 amount) external returns (bool);\n    function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);\n\n    event Transfer(address indexed from, address indexed to, uint256 value);\n    event Approval(address indexed owner, address indexed spender, uint256 value);\n}\n\n/*\n * @dev Interface for the optional metadata functions from the ERC20 standard.\n * Available since v4.1.\n */\ninterface IERC20Metadata is IERC20 {\n    function name() external view returns (string memory);\n    function symbol() external view returns (string memory);\n    function decimals() external view returns (uint8);\n}\n\ncontract YourContractName is IERC20, IERC20Metadata {\n    // Your contract implementation goes here...\n}"
+    }
+  },
+  "settings": {
+    "metadata": {
+      "useLiteralContent": true
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "metadata"
+        ]
+      }
+    }
+  }
+}
+
+
+
+Please note that you need to replace "YourContractName.sol" with the actual name of your Solidity file.
+
+
+write this in JSON format for meta data ; solidity
+/**
+ * Submitted for verification at BscScan.com on 2021-09-16
+ */
+pragma solidity ^0.8.4;
+
+// SPDX-License-Identifier: MIT
+
+/**
+ * @dev Interface of the ERC20 standard as defined in the EIP.
+ */
+interface IERC20 {
+    /**
+     * @dev Returns the amount of tokens in existence.
+     */
+    function totalSupply() external view returns (uint256);
+
+    /**
+     * @dev Returns the amount of tokens owned by account.
+     */
+    function balanceOf(address account) external view returns (uint256);
+
+    /**
+     * @dev Moves amount tokens from the caller's account to recipient.
+     */
+    function transfer(address recipient, uint256 amount) external returns (bool);
+
+    /**
+     * @dev Returns the remaining number of tokens that spender will be allowed to spend on behalf of owner through {transferFrom}. This is zero by default.
+     */
+    function allowance(address owner, address spender) external view returns (uint256);
+
+    /**
+     * @dev Sets amount as the allowance of spender over the caller's tokens.
+     */
+    function approve(address spender, uint256 amount) external returns (bool);
+
+    /**
+     * @dev Moves amount tokens from sender to recipient using the allowance mechanism. amount is then deducted from the caller's allowance.
+     */
+    function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
+
+    /**
+     * @dev Emitted when value tokens are moved from one account (from) to another (to).
+     */
+    event Transfer(address indexed from, address indexed to, uint256 value);
+
+    /**
+     * @dev Emitted when the allowance of a spender for an owner is set by a call to {approve}. value is the new allowance.
+     */
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+}
+
+pragma solidity ^0.8.0;
+
+/**
+ * @dev Interface for the optional metadata functions from the ERC20 standard.
+ *
+ * Available since v4.1.
+ */
+interface IERC20Metadata is IERC20 {
+    /**
+     * @dev Returns the name of the token.
+     */
+    function name() external view returns (string memory);
+
+    /**
+     * @dev Returns the symbol of the token.
+     */
+    function symbol() external view returns (string memory);
+
+    /**
+     * @dev Returns the decimals places of the token.
+     */
+    function decimals() external view returns (uint8);
+}
+
+contract ERC20 is IERC20, IERC20Metadata {
+    uint256 private _totalSupply;
+    mapping(address => uint256) private _balances;
+    mapping(address => mapping(address => uint256)) private _allowances;
+    string private _name;
+    string private _symbol;
+
+    /**
+     * @dev Sets the values for {name} and {symbol}.
+     *
+     * The default value of {decimals} is 18. To select a different value for
+     * {decimals} you should overload it.
+     *
+     * All two of these values are immutable: they can only be set once during
+     * construction.
+     */
+    constructor(string memory name_, string memory symbol_) {
+        _name = name_;
+        _symbol = symbol_;
+    }
+
+    /**
+     * @dev Returns the name of the token.
+     */
+    function name() public view override returns (string memory) {
+        return _name;
+    }
+
+    /**
+     * @dev Returns the symbol of the token.
+     */
+    function symbol() public view override returns (string memory) {
+        return _symbol;
+    }
+
+    /**
+     * @dev Returns the total token supply.
+     */
+    function totalSupply() public view override returns (uint256) {
+        return _totalSupply;
+    }
+
+    /**
+     * @dev Returns the token balance of the specified account.
+     */
+    function balanceOf(address account) public view override returns (uint256) {
+        return _balances[account];
+    }
+
+    /**
+     * @dev Moves tokens from sender to recipient.
+     *
+     * Emits a {Transfer} event.
+     */
+    function transfer(address recipient, uint256 amount) public override returns (bool) {
+        _transfer(msg.sender, recipient, amount);
+        return true;
+    }
+    pragma solidity ^0.6.12;
+
+import "./IERC20.sol";
+
+library LibERC20Token06 {
+    
+    function transfer(IERC20 token, address to, uint256 value) internal returns (bool) {
+        (bool success, bytes memory data) = address(token).call(abi.encodeWithSelector(token.transfer.selector, to, value));
+        require(success && (data.length == 0 || abi.decode(data, (bool))), "LibERC20Token06: Transfer failed");
+        return true;
+    }
+
+    function transferFrom(IERC20 token, address from, address to, uint256 value) internal returns (bool) {
+        (bool success, bytes memory data) = address(token).call(abi.encodeWithSelector(token.transferFrom.selector, from, to, value));
+        require(success && (data.length == 0 || abi.decode(data, (bool))), "LibERC20Token06: TransferFrom failed");
+        return true;
+    }
+
+    function approve(IERC20 token, address spender, uint256 value) internal returns (bool) {
+        (bool success, bytes memory data) = address(token).call(abi.encodeWithSelector(token.approve.selector, spender, value));
+        require(success && (data.length == 0 || abi.decode(data, (bool))), "LibERC20Token06: Approve failed");
+        return true;
+    }
+
+    function allowance(IERC20 token, address owner, address spender) internal view returns (uint256) {
+        (bool success, bytes memory data) = address(token).staticcall(abi.encodeWithSelector(token.allowance.selector, owner, spender));
+        require(success && (data.length == 0 || abi.decode(data, (uint256))), "LibERC20Token06: Allowance failed");
+        return abi.decode(data, (uint256));
+    }
+
+    function balanceOf(IERC20 token, address owner) internal view returns (uint256) {
+        (bool success, bytes memory data) = address(token).staticcall(abi.encodeWithSelector(token.balanceOf.selector, owner));
+        require(success && (data.length == 0 || abi.decode(data, (uint256))), "LibERC20Token06: BalanceOf failed");
+        return abi.decode(data, (uint256));
+    }
+}
