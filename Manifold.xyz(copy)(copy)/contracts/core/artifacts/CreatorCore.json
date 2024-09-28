@@ -1,0 +1,763 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"blacklistExtension(address)": "02e7afb7",
+			"getApproveTransfer()": "22f374d0",
+			"getExtensions()": "83b7db63",
+			"getFeeBps(uint256)": "0ebd4c7f",
+			"getFeeRecipients(uint256)": "b9c4d9fb",
+			"getFees(uint256)": "d5a06d4c",
+			"getRoyalties(uint256)": "bb3bafd6",
+			"registerExtension(address,string)": "3071a0f9",
+			"registerExtension(address,string,bool)": "3f0f37f6",
+			"royaltyInfo(uint256,uint256)": "2a55205a",
+			"setApproveTransfer(address)": "596798ad",
+			"setApproveTransferExtension(bool)": "ac0c8cfa",
+			"setBaseTokenURI(string)": "30176e13",
+			"setBaseTokenURIExtension(string)": "3e6134b8",
+			"setBaseTokenURIExtension(string,bool)": "82dcc0c8",
+			"setMintPermissions(address,address)": "f0cdc499",
+			"setRoyalties(address[],uint256[])": "332dd1ae",
+			"setRoyalties(uint256,address[],uint256[])": "20e4afe2",
+			"setRoyaltiesExtension(address,address[],uint256[])": "b0fe87c9",
+			"setTokenURI(uint256,string)": "162094c4",
+			"setTokenURI(uint256[],string[])": "aafb2d44",
+			"setTokenURIExtension(uint256,string)": "e92a89f6",
+			"setTokenURIExtension(uint256[],string[])": "61e5bc6b",
+			"setTokenURIPrefix(string)": "99e0dd7c",
+			"setTokenURIPrefixExtension(string)": "66d1e9d0",
+			"supportsInterface(bytes4)": "01ffc9a7",
+			"tokenExtension(uint256)": "239be317",
+			"unregisterExtension(address)": "ce8aee9d"
+		}
+	},
+	"abi": [
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "address",
+					"name": "extension",
+					"type": "address"
+				}
+			],
+			"name": "ApproveTransferUpdated",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "address payable[]",
+					"name": "receivers",
+					"type": "address[]"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256[]",
+					"name": "basisPoints",
+					"type": "uint256[]"
+				}
+			],
+			"name": "DefaultRoyaltiesUpdated",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "extension",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"internalType": "bool",
+					"name": "enabled",
+					"type": "bool"
+				}
+			],
+			"name": "ExtensionApproveTransferUpdated",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "extension",
+					"type": "address"
+				},
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "sender",
+					"type": "address"
+				}
+			],
+			"name": "ExtensionBlacklisted",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "extension",
+					"type": "address"
+				},
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "sender",
+					"type": "address"
+				}
+			],
+			"name": "ExtensionRegistered",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "extension",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"internalType": "address payable[]",
+					"name": "receivers",
+					"type": "address[]"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256[]",
+					"name": "basisPoints",
+					"type": "uint256[]"
+				}
+			],
+			"name": "ExtensionRoyaltiesUpdated",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "extension",
+					"type": "address"
+				},
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "sender",
+					"type": "address"
+				}
+			],
+			"name": "ExtensionUnregistered",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "extension",
+					"type": "address"
+				},
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "permissions",
+					"type": "address"
+				},
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "sender",
+					"type": "address"
+				}
+			],
+			"name": "MintPermissionsUpdated",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "tokenId",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "address payable[]",
+					"name": "receivers",
+					"type": "address[]"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256[]",
+					"name": "basisPoints",
+					"type": "uint256[]"
+				}
+			],
+			"name": "RoyaltiesUpdated",
+			"type": "event"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "extension",
+					"type": "address"
+				}
+			],
+			"name": "blacklistExtension",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getApproveTransfer",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getExtensions",
+			"outputs": [
+				{
+					"internalType": "address[]",
+					"name": "extensions",
+					"type": "address[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "tokenId",
+					"type": "uint256"
+				}
+			],
+			"name": "getFeeBps",
+			"outputs": [
+				{
+					"internalType": "uint256[]",
+					"name": "",
+					"type": "uint256[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "tokenId",
+					"type": "uint256"
+				}
+			],
+			"name": "getFeeRecipients",
+			"outputs": [
+				{
+					"internalType": "address payable[]",
+					"name": "",
+					"type": "address[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "tokenId",
+					"type": "uint256"
+				}
+			],
+			"name": "getFees",
+			"outputs": [
+				{
+					"internalType": "address payable[]",
+					"name": "",
+					"type": "address[]"
+				},
+				{
+					"internalType": "uint256[]",
+					"name": "",
+					"type": "uint256[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "tokenId",
+					"type": "uint256"
+				}
+			],
+			"name": "getRoyalties",
+			"outputs": [
+				{
+					"internalType": "address payable[]",
+					"name": "",
+					"type": "address[]"
+				},
+				{
+					"internalType": "uint256[]",
+					"name": "",
+					"type": "uint256[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "extension",
+					"type": "address"
+				},
+				{
+					"internalType": "string",
+					"name": "baseURI",
+					"type": "string"
+				}
+			],
+			"name": "registerExtension",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "extension",
+					"type": "address"
+				},
+				{
+					"internalType": "string",
+					"name": "baseURI",
+					"type": "string"
+				},
+				{
+					"internalType": "bool",
+					"name": "baseURIIdentical",
+					"type": "bool"
+				}
+			],
+			"name": "registerExtension",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "tokenId",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "value",
+					"type": "uint256"
+				}
+			],
+			"name": "royaltyInfo",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "extension",
+					"type": "address"
+				}
+			],
+			"name": "setApproveTransfer",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bool",
+					"name": "enabled",
+					"type": "bool"
+				}
+			],
+			"name": "setApproveTransferExtension",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "uri",
+					"type": "string"
+				}
+			],
+			"name": "setBaseTokenURI",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "uri",
+					"type": "string"
+				}
+			],
+			"name": "setBaseTokenURIExtension",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "uri",
+					"type": "string"
+				},
+				{
+					"internalType": "bool",
+					"name": "identical",
+					"type": "bool"
+				}
+			],
+			"name": "setBaseTokenURIExtension",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "extension",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "permissions",
+					"type": "address"
+				}
+			],
+			"name": "setMintPermissions",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "tokenId",
+					"type": "uint256"
+				},
+				{
+					"internalType": "address payable[]",
+					"name": "receivers",
+					"type": "address[]"
+				},
+				{
+					"internalType": "uint256[]",
+					"name": "basisPoints",
+					"type": "uint256[]"
+				}
+			],
+			"name": "setRoyalties",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address payable[]",
+					"name": "receivers",
+					"type": "address[]"
+				},
+				{
+					"internalType": "uint256[]",
+					"name": "basisPoints",
+					"type": "uint256[]"
+				}
+			],
+			"name": "setRoyalties",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "extension",
+					"type": "address"
+				},
+				{
+					"internalType": "address payable[]",
+					"name": "receivers",
+					"type": "address[]"
+				},
+				{
+					"internalType": "uint256[]",
+					"name": "basisPoints",
+					"type": "uint256[]"
+				}
+			],
+			"name": "setRoyaltiesExtension",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "tokenId",
+					"type": "uint256"
+				},
+				{
+					"internalType": "string",
+					"name": "uri",
+					"type": "string"
+				}
+			],
+			"name": "setTokenURI",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256[]",
+					"name": "tokenIds",
+					"type": "uint256[]"
+				},
+				{
+					"internalType": "string[]",
+					"name": "uris",
+					"type": "string[]"
+				}
+			],
+			"name": "setTokenURI",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256[]",
+					"name": "tokenId",
+					"type": "uint256[]"
+				},
+				{
+					"internalType": "string[]",
+					"name": "uri",
+					"type": "string[]"
+				}
+			],
+			"name": "setTokenURIExtension",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "tokenId",
+					"type": "uint256"
+				},
+				{
+					"internalType": "string",
+					"name": "uri",
+					"type": "string"
+				}
+			],
+			"name": "setTokenURIExtension",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "prefix",
+					"type": "string"
+				}
+			],
+			"name": "setTokenURIPrefix",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "prefix",
+					"type": "string"
+				}
+			],
+			"name": "setTokenURIPrefixExtension",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes4",
+					"name": "interfaceId",
+					"type": "bytes4"
+				}
+			],
+			"name": "supportsInterface",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "tokenId",
+					"type": "uint256"
+				}
+			],
+			"name": "tokenExtension",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "extension",
+					"type": "address"
+				}
+			],
+			"name": "unregisterExtension",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}

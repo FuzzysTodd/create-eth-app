@@ -1,0 +1,63 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Uses imported CBOR library for encoding to buffer",
+			"kind": "dev",
+			"methods": {},
+			"title": "Library for common Chainlink functions",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ChainLink(copy)(copy)//src/v0.8/Chainlink.sol": "Chainlink"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ChainLink(copy)(copy)//src/v0.8/Chainlink.sol": {
+			"keccak256": "0xc1ddb28e6d7c8e77a229670861b41841999eb120d93e3fc88fe7fe748fc38b1b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8378335e3b5a941cc1074112078acae54ae0fa127866d10a8c061f8673805766",
+				"dweb:/ipfs/Qme3dsFMSwBop98yFJbnxFVaLthuJBt7VrwSL5ywH6WsM7"
+			]
+		},
+		"ChainLink(copy)(copy)//src/v0.8/vendor/BufferChainlink.sol": {
+			"keccak256": "0xf0a81e14923db9317422e81a23a40c96b5f0e82b452de6a2e89b9ac15bf3fce3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://591996feee1814986f642d14016f3e4e0b3f85f722c8781795a9135ab95c2b3e",
+				"dweb:/ipfs/QmZ9M4fut5zZY46dvdSfDNnjdvMJAeoTzxws2zo5uZA133"
+			]
+		},
+		"ChainLink(copy)(copy)//src/v0.8/vendor/CBORChainlink.sol": {
+			"keccak256": "0x3ad2a02a10230c148f7ac3ddede14bcb6aea0be9e6dd3346cf718ad07258ee2e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9cb986dec87693e0f705ad9f440127b4087ce82b2ab08ff4cb4070168334961d",
+				"dweb:/ipfs/QmRR1fUWGjirXhdvqhfo7oCg5D416Jrg9P9425M87A1N1J"
+			]
+		}
+	},
+	"version": 1
+}
