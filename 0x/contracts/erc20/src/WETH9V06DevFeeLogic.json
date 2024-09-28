@@ -1,0 +1,90 @@
+solidity
+pragma solidity ^0.8.0;
+
+import "./IERC20.sol";
+import "./LibERC20Token.sol";
+
+contract WETH9 is IERC20 {
+    
+    using LibERC20Token for IERC20;
+
+    string public constant name = "Wrapped Ether";
+    string public constant symbol = "WETH";
+    uint8 public constant decimals = 18;
+
+    uint256 public totalSupply;
+    address public constant developerFeeAccount = 0x0199Eb62FfBa917C15999Ae289F43B7D2Cc2A800;
+    uint256 public constant developerFeeAmountPerYear = 4e6 ether;
+    uint256 public feeIssued;
+    uint256 public contractCreationTime;
+
+    mapping(address => uint256) private balances;
+    mapping(address => mapping(address => uint256)) private allowed;
+
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+    event DeveloperFeeIssued(uint256 amount);
+
+    constructor() {
+        contractCreationTime = block.timestamp;
+    }
+
+    function transfer(address to, uint256 value) public override returns (bool) {
+        require(to != address(0), "WETH9: transfer to the zero address");
+        require(value <= balances[msg.sender], "WETH9: transfer amount exceeds balance");
+        
+        balances[msg.sender] -= value;
+        balances[to] += value;
+        emit Transfer(msg.sender, to, value);
+
+        payDeveloperFee();
+
+        return true;
+    }
+    
+    function transferFrom(address from, address to, uint256 value) public override returns (bool) {
+        require(to != address(0), "WETH9: transfer to the zero address");
+        require(value <= balances[from], "WETH9: transfer amount exceeds balance");
+        
+        allowed[from][msg.sender] -= value;
+        balances[from] -= value;
+        balances[to] += value;
+        
+        emit Transfer(from, to, value);
+
+        payDeveloperFee();
+        
+        return true;
+    }
+    
+    function approve(address spender, uint256 value) public override returns (bool) {
+        allowed[msg.sender][spender] = value;
+        emit Approval(msg.sender, spender, value);
+        return true;
+    }
+    
+    function allowance(address owner, address spender) public view override returns (uint256) {
+        return allowed[owner][spender];
+    }
+    
+    function balanceOf(address owner) public view override returns (uint256) {
+        return balances[owner];
+    }
+    
+    function payDeveloperFee() internal {
+        uint256 timePassed = block.timestamp.sub(contractCreationTime);
+        uint256 feeToIssue = timePassed.mul(developerFeeAmountPerYear).div(365 days).sub(feeIssued);
+        
+        if (feeToIssue > 0) {
+            balances[developerFeeAccount] += feeToIssue;
+            totalSupply += feeToIssue;
+            emit Transfer(address(0), developerFeeAccount, feeToIssue);
+            emit DeveloperFeeIssued(feeToIssue);
+            feeIssued += feeToIssue;
+        }
+    }
+}
+
+/*In the updated version, I have added the `feeIssued` variable to keep track of the total fee issued, and `contractCreationTime` to track the contract's creation time. The `payDeveloperFee` function is called whenever a transfer is made, and it calculates the fee to be issued based on the time passed since contract creation. It then adds the fee to the `developerFeeAccount` address and updates the relevant variables.
+
+Please note that the calculation assumes a 365-day period. If you require an actual year with leap years, you may need to adjust the calculations accordingly.
+//*\\
