@@ -1,0 +1,782 @@
+{
+	"compiler": {
+		"version": "0.8.27+commit.40a35a09"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "vault",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "value",
+						"type": "bool"
+					}
+				],
+				"name": "DelegateForAll",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "vault",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "contract_",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "value",
+						"type": "bool"
+					}
+				],
+				"name": "DelegateForContract",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "vault",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "contract_",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "value",
+						"type": "bool"
+					}
+				],
+				"name": "DelegateForToken",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "vault",
+						"type": "address"
+					}
+				],
+				"name": "RevokeAllDelegates",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "vault",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					}
+				],
+				"name": "RevokeDelegate",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "vault",
+						"type": "address"
+					}
+				],
+				"name": "checkDelegateForAll",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "vault",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "contract_",
+						"type": "address"
+					}
+				],
+				"name": "checkDelegateForContract",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "vault",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "contract_",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "checkDelegateForToken",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "value",
+						"type": "bool"
+					}
+				],
+				"name": "delegateForAll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "contract_",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "value",
+						"type": "bool"
+					}
+				],
+				"name": "delegateForContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "contract_",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "value",
+						"type": "bool"
+					}
+				],
+				"name": "delegateForToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "vault",
+						"type": "address"
+					}
+				],
+				"name": "getContractLevelDelegations",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "contract_",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "delegate",
+								"type": "address"
+							}
+						],
+						"internalType": "struct IDelegationRegistry.ContractDelegation[]",
+						"name": "contractDelegations",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "vault",
+						"type": "address"
+					}
+				],
+				"name": "getDelegatesForAll",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "delegates",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "vault",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "contract_",
+						"type": "address"
+					}
+				],
+				"name": "getDelegatesForContract",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "delegates",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "vault",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "contract_",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "getDelegatesForToken",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "delegates",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					}
+				],
+				"name": "getDelegationsByDelegate",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "enum IDelegationRegistry.DelegationType",
+								"name": "type_",
+								"type": "uint8"
+							},
+							{
+								"internalType": "address",
+								"name": "vault",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "delegate",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "contract_",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct IDelegationRegistry.DelegationInfo[]",
+						"name": "info",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "vault",
+						"type": "address"
+					}
+				],
+				"name": "getTokenLevelDelegations",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "contract_",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "delegate",
+								"type": "address"
+							}
+						],
+						"internalType": "struct IDelegationRegistry.TokenDelegation[]",
+						"name": "tokenDelegations",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "revokeAllDelegates",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					}
+				],
+				"name": "revokeDelegate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "vault",
+						"type": "address"
+					}
+				],
+				"name": "revokeSelf",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "interfaceId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsInterface",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"custom:coauthor": "foobar (0xfoobar)wwchung (manifoldxyz)purplehat (artblocks)ryley-o (artblocks)andy8052 (tessera)punk6529 (open metaverse)loopify (loopiverse)emiliano (nftrentals)arran (proof)james (collabland)john (gnosis safe)0xrusowsky",
+			"custom:version": "1.0",
+			"details": "See EIP-5639, new project launches can read previous cold wallet -> hot wallet delegations from here and integrate those permissions into their flow.",
+			"kind": "dev",
+			"methods": {
+				"checkDelegateForAll(address,address)": {
+					"params": {
+						"delegate": "The hotwallet to act on your behalf",
+						"vault": "The cold wallet who issued the delegation"
+					}
+				},
+				"checkDelegateForContract(address,address,address)": {
+					"params": {
+						"contract_": "The address for the contract you're delegating",
+						"delegate": "The hotwallet to act on your behalf",
+						"vault": "The cold wallet who issued the delegation"
+					}
+				},
+				"checkDelegateForToken(address,address,address,uint256)": {
+					"params": {
+						"contract_": "The address for the contract you're delegating",
+						"delegate": "The hotwallet to act on your behalf",
+						"tokenId": "The token id for the token you're delegating",
+						"vault": "The cold wallet who issued the delegation"
+					}
+				},
+				"delegateForAll(address,bool)": {
+					"params": {
+						"delegate": "The hotwallet to act on your behalf",
+						"value": "Whether to enable or disable delegation for this address, true for setting and false for revoking"
+					}
+				},
+				"delegateForContract(address,address,bool)": {
+					"params": {
+						"contract_": "The address for the contract you're delegating",
+						"delegate": "The hotwallet to act on your behalf",
+						"value": "Whether to enable or disable delegation for this address, true for setting and false for revoking"
+					}
+				},
+				"delegateForToken(address,address,uint256,bool)": {
+					"params": {
+						"contract_": "The address for the contract you're delegating",
+						"delegate": "The hotwallet to act on your behalf",
+						"tokenId": "The token id for the token you're delegating",
+						"value": "Whether to enable or disable delegation for this address, true for setting and false for revoking"
+					}
+				},
+				"getContractLevelDelegations(address)": {
+					"params": {
+						"vault": "The cold wallet who issued the delegations"
+					},
+					"returns": {
+						"contractDelegations": "Array of ContractDelegation structs"
+					}
+				},
+				"getDelegatesForAll(address)": {
+					"params": {
+						"vault": "The cold wallet who issued the delegation"
+					},
+					"returns": {
+						"delegates": "addresses Array of wallet-level delegates for a given vault"
+					}
+				},
+				"getDelegatesForContract(address,address)": {
+					"params": {
+						"contract_": "The address for the contract you're delegating",
+						"vault": "The cold wallet who issued the delegation"
+					},
+					"returns": {
+						"delegates": "addresses Array of contract-level delegates for a given vault and contract"
+					}
+				},
+				"getDelegatesForToken(address,address,uint256)": {
+					"params": {
+						"contract_": "The address for the contract holding the token",
+						"tokenId": "The token id for the token you're delegating",
+						"vault": "The cold wallet who issued the delegation"
+					},
+					"returns": {
+						"delegates": "addresses Array of contract-level delegates for a given vault's token"
+					}
+				},
+				"getDelegationsByDelegate(address)": {
+					"params": {
+						"delegate": "The delegate that you would like to retrieve delegations for"
+					},
+					"returns": {
+						"info": "Array of DelegationInfo structs"
+					}
+				},
+				"getTokenLevelDelegations(address)": {
+					"params": {
+						"vault": "The cold wallet who issued the delegations"
+					},
+					"returns": {
+						"tokenDelegations": "Array of TokenDelegation structs"
+					}
+				},
+				"revokeDelegate(address)": {
+					"params": {
+						"delegate": "The hotwallet to revoke"
+					}
+				},
+				"revokeSelf(address)": {
+					"params": {
+						"vault": "The vault which delegated to the msg.sender, and should be removed"
+					}
+				},
+				"supportsInterface(bytes4)": {
+					"details": "See {IERC165-supportsInterface}."
+				}
+			},
+			"stateVariables": {
+				"delegationHashes": {
+					"details": "delegate -> delegationHashes"
+				},
+				"delegationInfo": {
+					"details": "delegationHash -> DelegateInfo"
+				},
+				"delegations": {
+					"details": "vault -> vaultVersion -> delegationHash"
+				}
+			},
+			"title": "DelegationRegistry",
+			"version": 1
+		},
+		"userdoc": {
+			"events": {
+				"DelegateForAll(address,address,bool)": {
+					"notice": "Emitted when a user delegates their entire wallet"
+				},
+				"DelegateForContract(address,address,address,bool)": {
+					"notice": "Emitted when a user delegates a specific contract"
+				},
+				"DelegateForToken(address,address,address,uint256,bool)": {
+					"notice": "Emitted when a user delegates a specific token"
+				},
+				"RevokeAllDelegates(address)": {
+					"notice": "Emitted when a user revokes all delegations"
+				},
+				"RevokeDelegate(address,address)": {
+					"notice": "Emitted when a user revoes all delegations for a given delegate"
+				}
+			},
+			"kind": "user",
+			"methods": {
+				"checkDelegateForAll(address,address)": {
+					"notice": "Returns true if the address is delegated to act on the entire vault"
+				},
+				"checkDelegateForContract(address,address,address)": {
+					"notice": "Returns true if the address is delegated to act on your behalf for a token contract or an entire vault"
+				},
+				"checkDelegateForToken(address,address,address,uint256)": {
+					"notice": "Returns true if the address is delegated to act on your behalf for a specific token, the token's contract or an entire vault"
+				},
+				"delegateForAll(address,bool)": {
+					"notice": "Allow the delegate to act on your behalf for all contracts"
+				},
+				"delegateForContract(address,address,bool)": {
+					"notice": "Allow the delegate to act on your behalf for a specific contract"
+				},
+				"delegateForToken(address,address,uint256,bool)": {
+					"notice": "Allow the delegate to act on your behalf for a specific token"
+				},
+				"getContractLevelDelegations(address)": {
+					"notice": "Returns all contract-level delegations for a given vault"
+				},
+				"getDelegatesForAll(address)": {
+					"notice": "Returns an array of wallet-level delegates for a given vault"
+				},
+				"getDelegatesForContract(address,address)": {
+					"notice": "Returns an array of contract-level delegates for a given vault and contract"
+				},
+				"getDelegatesForToken(address,address,uint256)": {
+					"notice": "Returns an array of contract-level delegates for a given vault's token"
+				},
+				"getDelegationsByDelegate(address)": {
+					"notice": "Returns all active delegations a given delegate is able to claim on behalf of"
+				},
+				"getTokenLevelDelegations(address)": {
+					"notice": "Returns all token-level delegations for a given vault"
+				},
+				"revokeAllDelegates()": {
+					"notice": "Revoke all delegates"
+				},
+				"revokeDelegate(address)": {
+					"notice": "Revoke a specific delegate for all their permissions"
+				},
+				"revokeSelf(address)": {
+					"notice": "Remove yourself as a delegate for a specific vault"
+				}
+			},
+			"notice": "An immutable registry contract to be deployed as a standalone primitive.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Delegate(copy)(copy)//contracts/DelegationRegistry.sol": "DelegationRegistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Delegate(copy)(copy)//contracts/DelegationRegistry.sol": {
+			"keccak256": "0x497097084f56f0c6acf83e755860b8d7bb57317096978455475faba7514a3b07",
+			"license": "CC0-1.0",
+			"urls": [
+				"bzz-raw://66250c50eae0141a4254976b586f02f5f1deb0c2c5e863cb39c2988cab033506",
+				"dweb:/ipfs/QmNtDhaBe5PXXPrbbegGkqERDCgupDWhydFYztschhmVsK"
+			]
+		},
+		"Delegate(copy)(copy)//contracts/IDelegationRegistry.sol": {
+			"keccak256": "0xfb5c60688b90c03d7a7a72d7422f8626a6f49d71493a155c9b9b4b4607b2f1ad",
+			"license": "CC0-1.0",
+			"urls": [
+				"bzz-raw://f698892d67217cd33efdd1b3a48e41675a21b46295320282f78552eb4a03a4b1",
+				"dweb:/ipfs/QmSnpuYkYPiP7342CFDCgBQfsj24sXVuPF34NBMrCo9yVM"
+			]
+		},
+		"Delegate/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+			"keccak256": "0x13cb414da464ec9fef446e5ab43a40a4253de0586889490cef166d7981b50af3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://eb443e4c23e8ecb1762e416ea7a9c7abfcd68a291b91c4be05e0e6bb99c788ff",
+				"dweb:/ipfs/QmNjhe9r3QHGromsdd6Xoi4qJKZTXYeKT6ohBymD3fEQt5"
+			]
+		},
+		"Delegate/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x459081472fd7f61ca152e5b8a368fab5ad48c834526cc421a7bc0d352486c680",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://83c1adbaa928d46ec81cb335ba50de64497de2b07699c59fa8cfd54b8ba0a1fb",
+				"dweb:/ipfs/QmYw13ErJq29DZB8NRq9RUY7DufMJxaA2cCmuVcVyRvyhy"
+			]
+		},
+		"Delegate/@openzeppelin/contracts/utils/structs/EnumerableSet.sol": {
+			"keccak256": "0x7ee0dc5c24647a0e9f0dd2e5a601846a250e6994d489bc65206087245225b955",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c4edd9305df0d9a2d05a6af893a45e89e443014093f899d4e724738562deb0ea",
+				"dweb:/ipfs/QmVYydCtB5RUpzhoFDAyALh5626LVQeWWabhLF9Vpt27YR"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,471 @@
+{
+	"compiler": {
+		"version": "0.8.27+commit.40a35a09"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract ISuperToken",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "afterAgreementCreated",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract ISuperToken",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "afterAgreementTerminated",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract ISuperToken",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "afterAgreementUpdated",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract ISuperToken",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "beforeAgreementCreated",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract ISuperToken",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "beforeAgreementTerminated",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract ISuperToken",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "beforeAgreementUpdated",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"SuperFluid(copy)(copy)//contracts/apps/SuperAppBase.sol": "SuperAppBase"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"SuperFluid(copy)(copy)//contracts/apps/SuperAppBase.sol": {
+			"keccak256": "0x5851ff8de33fd63629c79128725e02f64b37bbc031f8adfb88f1952d25ec9ded",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://147ff17c3824116ffc37ff2bbca94e8386817123c2684e63a270b60e8726da9f",
+				"dweb:/ipfs/QmNucWX8bWiHPVxZUYErsk35x1JNDH8MfM7yot9QDi7Q95"
+			]
+		},
+		"SuperFluid(copy)(copy)//contracts/interfaces/agreements/IConstantFlowAgreementV1.sol": {
+			"keccak256": "0xd22fd5609d2c8ba4ca4e9dfa9bcc7ab8c42162c26d12142e593881eb4c9b19c5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a0b7ba78e59aad345deb11a9a2a94f96f18ed6b7d6bacd8bd4f39db38b639c99",
+				"dweb:/ipfs/QmWTkFT9qVu7C5HwynM4wuimWWXp1PxgtULpKJgSvCYaYk"
+			]
+		},
+		"SuperFluid(copy)(copy)//contracts/interfaces/agreements/IInstantDistributionAgreementV1.sol": {
+			"keccak256": "0xf2a95c79c0a0f390e7610bd2d952258066dc3908369a9d6229e4c9d6d3337ea9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ae8813588efc5c88c8379c57e44bb8e0a9acc9a152ae9913d0279019e6048d39",
+				"dweb:/ipfs/QmTRtmXk69jNzJaRDbR8bJvqu9boZ9o9ynwRJHmT5qvUDE"
+			]
+		},
+		"SuperFluid(copy)(copy)//contracts/interfaces/superfluid/Definitions.sol": {
+			"keccak256": "0x863c90774fb5bd359a8f1a51f5a57724c0bd123721bc8014d0c56dc85d987fa1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://64cd0d70bb5541f9e10e7f1f9935f36f9c9d009434fa639d78f7a979b9b60e50",
+				"dweb:/ipfs/QmThV7463hgH2B6fyGp3PJEEwco3hVewLgwrTTaqUtGRPj"
+			]
+		},
+		"SuperFluid(copy)(copy)//contracts/interfaces/superfluid/IConstantInflowNFT.sol": {
+			"keccak256": "0x04eae77ec3e25cf7559b6ba41c57e89ff66007a6d7febec2dbc4f1890ae0ee72",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7284865094c84526d0e76ebaf6ef705486e43aeaa9487bc4a2b8468ae5e52c79",
+				"dweb:/ipfs/QmUKZvGMYpcfcPnsN7zfpFC7ziZUnLRpDd7UfLjoMetnhE"
+			]
+		},
+		"SuperFluid(copy)(copy)//contracts/interfaces/superfluid/IConstantOutflowNFT.sol": {
+			"keccak256": "0xeb3b4e895b0467ee3d1368c1375284a17800eff4eb8cebb4a929cca142d3f486",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c87b81afd600c401f3b5116878f317642734bb806732595bfddde9b2789d4629",
+				"dweb:/ipfs/QmPVsJkFmN1S8df3sWT7w6ZfTtvBtimLZEeAAteFJbx2WM"
+			]
+		},
+		"SuperFluid(copy)(copy)//contracts/interfaces/superfluid/IFlowNFTBase.sol": {
+			"keccak256": "0x94c7c05e6e511072fedca0f814cb3f06422db76e9f8aaac3c489d14194648ca5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://af384e30f7212fa248343bd3e0dcaa70ba8a86f967519375dabd9247b951c6fe",
+				"dweb:/ipfs/QmQQRT5MQFxE9BJQqxN1RiUkVeyLdqaZwefFs9EWpo6nT9"
+			]
+		},
+		"SuperFluid(copy)(copy)//contracts/interfaces/superfluid/IPoolAdminNFT.sol": {
+			"keccak256": "0x449b3fab23e05e27ae8ba922e9830e67ba274ee6846639787e2b42759dc20001",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9e156c86a6afa583423b51ac7f22153572c82f0afa52b16e66da5b6a18c59b4e",
+				"dweb:/ipfs/QmYpNeEFGpFnwkQ1XBX1ZqBizmQDgr24g3auTjWqjLC9VG"
+			]
+		},
+		"SuperFluid(copy)(copy)//contracts/interfaces/superfluid/IPoolMemberNFT.sol": {
+			"keccak256": "0xa3708f68225a67d93e1d7f60691553deb07dd66ee369e16c623d0cc6bf63c692",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e7d46ffc479beae8eb3b865c9160c42adfda2566abd4ae3374874f44c995ec5a",
+				"dweb:/ipfs/QmRAct55DBY5c2mAzMeoANchz6Uy6vgL1tuAXJwDtXKC2Y"
+			]
+		},
+		"SuperFluid(copy)(copy)//contracts/interfaces/superfluid/ISuperAgreement.sol": {
+			"keccak256": "0x090136a44ae9cad1ae37e86b9760c00885b1ea3332a61409f7dd72b39c5c8bf2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://499e31cf8f14242fe8eb70ee956209ade43308b6e45fd46781bc191b47db6bf6",
+				"dweb:/ipfs/QmfUsTvJ97wnWuxPPJdqPEgMZXv6ywtt1sdxgzyxAcHK7w"
+			]
+		},
+		"SuperFluid(copy)(copy)//contracts/interfaces/superfluid/ISuperApp.sol": {
+			"keccak256": "0xe698d2b79b79c9084ec510ff60dd88dcff3a86bd78883ff7d110c27a2e809a45",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d29d2feff9c62773ff32eb1ec9fcfc4f87c73440b06900ede246c8e122535bdd",
+				"dweb:/ipfs/QmdNeFmKyfmGGJyvgwEJFyM8zfnyxCZTTysLkaiHHFBWDN"
+			]
+		},
+		"SuperFluid(copy)(copy)//contracts/interfaces/superfluid/ISuperToken.sol": {
+			"keccak256": "0xe725363fd8f26e5f8fd9569f0db42b3399ec023950028e33e58f7c66ce807c56",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4c11145a2f57bf550c2616a99500feec51695a6175035f5e114fa1bb25c2e8e7",
+				"dweb:/ipfs/QmSLgqomfKM5pB8EALK5ac2w4wEHqqiyQqMz9Za6Ec3715"
+			]
+		},
+		"SuperFluid(copy)(copy)//contracts/interfaces/superfluid/ISuperTokenFactory.sol": {
+			"keccak256": "0x6e5ef46d0f3ce440e5d21dc5a1b79e9ecf60abafe57c80877bbb1a5104610d57",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://65814b8e3e68903cfa0a53ac568d85ec2e187038c0062f6fc1b0f3aff13b18ae",
+				"dweb:/ipfs/QmPA9aviBB6h6y41s2ZBHQ9VHDoNzNT8JShzMK4owMenVt"
+			]
+		},
+		"SuperFluid(copy)(copy)//contracts/interfaces/superfluid/ISuperfluid.sol": {
+			"keccak256": "0xb987dcfb80ee7cde3b8f27ff5f10631cd6bf3fc8d949bbca320b36ba27552347",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f0e0231202ad2f671a776d40649a460d279c30d1ecf33ee7197816ff132aa850",
+				"dweb:/ipfs/QmbKEPiQtQugm5X6J3zmup6K2WFJoDpmxXsw72bj6fZYxo"
+			]
+		},
+		"SuperFluid(copy)(copy)//contracts/interfaces/superfluid/ISuperfluidGovernance.sol": {
+			"keccak256": "0xcd8bce7a09818e80f566cc462b501c4b9bbbc198a1beb5ca771417d83f4832d6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://06180878bfc3d709c6174bcc41e0453d68f3a809589e2d3b768663a829ec53ae",
+				"dweb:/ipfs/QmQiyzGX5AfkyGJRJcQM16vSYSdx9zkfmcsEL22q74h6DY"
+			]
+		},
+		"SuperFluid(copy)(copy)//contracts/interfaces/superfluid/ISuperfluidToken.sol": {
+			"keccak256": "0x33a05cb8fd13524246d1c4417b2926402db947bab0defa9635cc1cc5f999ce62",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://430252e5e65b2abe04d5b83c159e9df3e04c8a79f582e3dac11deb4f39e43c7c",
+				"dweb:/ipfs/QmUwG6tSxJgQq9d9tW1ohcdCiAL8HEk4HTAHGuJ3nKgHm9"
+			]
+		},
+		"SuperFluid(copy)(copy)//contracts/interfaces/tokens/ISETH.sol": {
+			"keccak256": "0x6247813970b8f438e638e3261702f3848937996240ec84037c8386eb6e126f9b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://19d91e2d6df2c7888190ce444d39e69b39c898cb542c23bc5f2f6df129d91c3e",
+				"dweb:/ipfs/QmYd62CEKE6fxMHFjJmpEPtfrerXREWhTDLhh6NazrYugA"
+			]
+		},
+		"SuperFluid/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x5ff70eb820b5dc4d12d83f2a06043d55acc79a3c9e85c49b3c259b679530f59d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2f9f85c8e96ed8f84f557812b0fe983ab9ca0a68b181d35b017cd201436ef78a",
+				"dweb:/ipfs/QmWLBDsDQMss2Fh1odp1gioekwm3qp4MBMirDYcwm5tqwS"
+			]
+		},
+		"SuperFluid/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+			"keccak256": "0x44f575b3abaab017c3f74f5326119b61b764746cd7ee867fea04ea57143aed5c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9e4afa611ecee3625f956bbd7f4f3467463630e092d3240e2493748b89bcf21d",
+				"dweb:/ipfs/Qmd3HmQJ8ZqXhkjaYS2Uk4k38aKWSgjthEUgNmoPWukfqs"
+			]
+		},
+		"SuperFluid/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+			"keccak256": "0x7e4340f7239e2ea796353d7b11b9bd099dffd505cbc70b1364002001c621dd2a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://46cb2b22d02f92b9f068d5748230308714c8a9971ca7ced8d2565fa2f8d11060",
+				"dweb:/ipfs/QmVW69F1hDtcAYNn5ijXYpeMwxZxiN3gZ2CUw1ubPn6x3B"
+			]
+		},
+		"SuperFluid/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+			"keccak256": "0xbc5eef04213a9034c75b180e202fe58c5ab4e87ecb38f4abaf7ff4cc3e603c7e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://64b998ff365de00d2ac2bf61d57bbd556f3764f18ea3393502e02b7f53e50b59",
+				"dweb:/ipfs/QmPFfkFLos9pnnw2CtbvS9AXpFgsresrFjkPjbAtuaYYB2"
+			]
+		},
+		"SuperFluid/@openzeppelin/contracts/token/ERC777/IERC777.sol": {
+			"keccak256": "0x7b59c4809a13e7a51416374269e9a1dde9e9edb70d2b9f25668dd00ffa61ad25",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://08779fa263c744aa75e61339744e0bb963bf89b98ade585ccda9242d76104790",
+				"dweb:/ipfs/Qmbo1sHb7SVT9mcjkmg7NhTe81g69MHQuE9hYQphFcyXLs"
+			]
+		},
+		"SuperFluid/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x92cbb904ea6277e13562a32a00832db8e66ccebc9f31edbe4a7b0a6fc5506a9e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7da6276a79ad08d180ca7223f2503db042c3f49aecc97de2b6ee24439b77bd47",
+				"dweb:/ipfs/QmQXkUe3EACpgDxpa3JAdy8ABsQyzJKPJAXw78356ombTD"
+			]
+		}
+	},
+	"version": 1
+}
