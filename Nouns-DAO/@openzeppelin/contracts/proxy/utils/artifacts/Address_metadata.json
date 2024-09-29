@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.27+commit.40a35a09"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Collection of functions related to the address type",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Nouns-DAO/@openzeppelin/contracts/proxy/utils/UUPSUpgradeable_flattened.sol": "Address"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Nouns-DAO/@openzeppelin/contracts/proxy/utils/UUPSUpgradeable_flattened.sol": {
+			"keccak256": "0x1a8cf5f40bcb62131ae4185a0e01ba77de00554a18e6680b94a6b249bbc71e19",
+			"urls": [
+				"bzz-raw://1845f861ce9672a7054240dad4565ab08e9c8294bf828f4bbe812c271e6d7917",
+				"dweb:/ipfs/QmejSGLvky2riBQbTn9RXeKp43hzDNCBPShaYmNVqxdMxT"
+			]
+		}
+	},
+	"version": 1
+}

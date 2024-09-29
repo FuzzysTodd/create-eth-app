@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.27+commit.40a35a09"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Provides information about the current execution context, including the sender of the transaction and its data. While these are generally available via msg.sender and msg.data, they should not be accessed in such a direct manner, since when dealing with meta-transactions the account sending and paying for execution may not be the actual sender (as far as an application is concerned). This contract is only required for intermediate, library-like contracts.",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"nft-staking-with-infinite-rewards(copy)/@openzeppelin/contracts/utils/Context.sol": "Context"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"nft-staking-with-infinite-rewards(copy)/@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0xaabd25ddbc91c7c09b05e6fb7eb79d1851e509fa21a405100967568542e1c08b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://911616537df7b67957a53adb57c4e02542c4a0f1388f367ff7c56303fddfea26",
+				"dweb:/ipfs/QmXNsCDS4aHhN4Li9DUZ36w7XHu7wp2pkjfqSM8b9UdGry"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,79 @@
+{
+	"compiler": {
+		"version": "0.8.27+commit.40a35a09"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "signature",
+						"type": "bytes"
+					}
+				],
+				"name": "isValidSignature",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "magicValue",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Interface of the ERC1271 standard signature validation method for contracts as defined in https://eips.ethereum.org/EIPS/eip-1271[ERC-1271]. _Available since v4.1._",
+			"kind": "dev",
+			"methods": {
+				"isValidSignature(bytes32,bytes)": {
+					"details": "Should return whether the signature provided is valid for the provided data",
+					"params": {
+						"hash": "Hash of the data to be signed",
+						"signature": "Signature byte array associated with _data"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Nouns-DAO/@openzeppelin/contracts/interfaces/IERC1271.sol": "IERC1271"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Nouns-DAO/@openzeppelin/contracts/interfaces/IERC1271.sol": {
+			"keccak256": "0x6d07a9aa53d6969700fc9921d43fdf30f68851dfdd570676bab640700bf351fc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6a27cdef9bb6ab06f7ea881c7abb3892dd74add8ad7f4ec5218f45e2bb37cbf5",
+				"dweb:/ipfs/QmeptNMJS9GKvQb7VL5L73cn1EWWqMx3LbEx4sBdvCduyw"
+			]
+		}
+	},
+	"version": 1
+}

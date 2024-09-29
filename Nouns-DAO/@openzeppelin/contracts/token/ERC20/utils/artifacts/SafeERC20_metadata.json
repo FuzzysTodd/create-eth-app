@@ -1,0 +1,63 @@
+{
+	"compiler": {
+		"version": "0.8.27+commit.40a35a09"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Wrappers around ERC20 operations that throw on failure (when the token contract returns false). Tokens that return no value (and instead revert or throw on failure) are also supported, non-reverting calls are assumed to be successful. To use this library you can add a `using SafeERC20 for IERC20;` statement to your contract, which allows you to call the safe operations as `token.safeTransfer(...)`, etc.",
+			"kind": "dev",
+			"methods": {},
+			"title": "SafeERC20",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Nouns-DAO/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": "SafeERC20"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Nouns-DAO/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x7875fa4ce4d503a928afc6de00a256b85a9e21ef8415e177f0cb1647564bb1fc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0fc5f7b5535cc1985186c0277b57ecc17ddce7d9d19046c4503885e7ca2fe062",
+				"dweb:/ipfs/QmNo76Chgo6ayZcbdCxVZ35eeB78Jzv8an9r7D1L6wNUYS"
+			]
+		},
+		"Nouns-DAO/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
+			"keccak256": "0xcc49714eccbea5111e7fa2a89152cc6c9f1ffa04743a2a6b2cf173921a56b257",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bc174508660d2690b8693cb6c3b310cf7bccadc2971e375680f4a2fbe5d247df",
+				"dweb:/ipfs/QmXwnAUCvoEV6oCm3egXhLUGhwkNgm9H2bpvhhWCDhQZxc"
+			]
+		},
+		"Nouns-DAO/@openzeppelin/contracts/utils/Address.sol": {
+			"keccak256": "0x27e098d70ba62ec1a1741d981fdcfeb2457342bd918744612fde619281bd9d30",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7f7c14a90bf506d9eab66e9c5b7b674882d8df022e6a0f24b049c9661a28aff9",
+				"dweb:/ipfs/QmcgkPPYqESxD2MXVaKFC6AUTS75g8qjYY6ymBCQvf3xB7"
+			]
+		}
+	},
+	"version": 1
+}
