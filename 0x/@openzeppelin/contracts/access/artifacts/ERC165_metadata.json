@@ -1,0 +1,69 @@
+{
+	"compiler": {
+		"version": "0.8.27+commit.40a35a09"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "interfaceId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsInterface",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Implementation of the {IERC165} interface. Contracts that want to implement ERC165 should inherit from this contract and override {supportsInterface} to check for the additional interface id that will be supported. For example: ```solidity function supportsInterface(bytes4 interfaceId) public view virtual override returns (bool) {     return interfaceId == type(MyInterface).interfaceId || super.supportsInterface(interfaceId); } ``` Alternatively, {ERC165Storage} provides an easier to use but more expensive implementation.",
+			"kind": "dev",
+			"methods": {
+				"supportsInterface(bytes4)": {
+					"details": "See {IERC165-supportsInterface}."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"0x/@openzeppelin/contracts/access/AccessControl_flattened.sol": "ERC165"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 5000000
+		},
+		"remappings": []
+	},
+	"sources": {
+		"0x/@openzeppelin/contracts/access/AccessControl_flattened.sol": {
+			"keccak256": "0xb1cdc13e1008a7031662610c5d94d317f8a1b0f274c4043ca83e444fd8d5ada4",
+			"urls": [
+				"bzz-raw://3fb434ca13472c0418f99bc440a5fa450e3e89ea63a0bbbd92373e0f3f278080",
+				"dweb:/ipfs/QmXdurJ1ANcTwEPPL4TSXZm2GSpHwwYfht3SZDbcbdY47K"
+			]
+		}
+	},
+	"version": 1
+}

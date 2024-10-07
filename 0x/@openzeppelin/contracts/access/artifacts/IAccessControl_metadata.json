@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.26+commit.8a97fa7a"
+		"version": "0.8.27+commit.40a35a09"
 	},
 	"language": "Solidity",
 	"output": {
@@ -219,26 +219,25 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"0x/@openzeppelin/contracts/access/IAccessControl.sol": "IAccessControl"
+			"0x/@openzeppelin/contracts/access/AccessControl_flattened.sol": "IAccessControl"
 		},
-		"evmVersion": "cancun",
+		"evmVersion": "istanbul",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
-			"runs": 200
+			"enabled": true,
+			"runs": 5000000
 		},
 		"remappings": []
 	},
 	"sources": {
-		"0x/@openzeppelin/contracts/access/IAccessControl.sol": {
-			"keccak256": "0xf8483678b8baa4c82ecceb6807e3665ce4b8916a7b60cf351a3dc05497b595d7",
-			"license": "MIT",
+		"0x/@openzeppelin/contracts/access/AccessControl_flattened.sol": {
+			"keccak256": "0xb1cdc13e1008a7031662610c5d94d317f8a1b0f274c4043ca83e444fd8d5ada4",
 			"urls": [
-				"bzz-raw://72cf17d3e83bec924b5997f279a7b2a9b97a4d3b994d19ee70061cd5d7de7a95",
-				"dweb:/ipfs/QmSGyV1DHE3j3XBX7dQyuTqBUg4vrkbyFcmHHP9HVtZsNE"
+				"bzz-raw://3fb434ca13472c0418f99bc440a5fa450e3e89ea63a0bbbd92373e0f3f278080",
+				"dweb:/ipfs/QmXdurJ1ANcTwEPPL4TSXZm2GSpHwwYfht3SZDbcbdY47K"
 			]
 		}
 	},

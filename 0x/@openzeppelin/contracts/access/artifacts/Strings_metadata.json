@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.27+commit.40a35a09"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "String operations.",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"0x/@openzeppelin/contracts/access/AccessControl_flattened.sol": "Strings"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 5000000
+		},
+		"remappings": []
+	},
+	"sources": {
+		"0x/@openzeppelin/contracts/access/AccessControl_flattened.sol": {
+			"keccak256": "0xb1cdc13e1008a7031662610c5d94d317f8a1b0f274c4043ca83e444fd8d5ada4",
+			"urls": [
+				"bzz-raw://3fb434ca13472c0418f99bc440a5fa450e3e89ea63a0bbbd92373e0f3f278080",
+				"dweb:/ipfs/QmXdurJ1ANcTwEPPL4TSXZm2GSpHwwYfht3SZDbcbdY47K"
+			]
+		}
+	},
+	"version": 1
+}
